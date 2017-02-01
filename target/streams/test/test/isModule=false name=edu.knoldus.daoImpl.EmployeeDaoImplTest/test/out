@@ -1,0 +1,43 @@
+[0m[[0minfo[0m] [0m[32mEmployeeDaoImplTest:[0m[0m
+[0m[[0minfo[0m] [0m[32m- test create employee[0m[0m
+[0m[[0minfo[0m] [0m[32m- test updateEmployee()[0m[0m
+[0m[[0minfo[0m] [0m[31m- test getEmployee() *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  java.lang.NullPointerException:[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.mysql.cj.jdbc.result.ResultSetImpl.checkColumnBounds(ResultSetImpl.java:494)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.mysql.cj.jdbc.result.ResultSetImpl.getLong(ResultSetImpl.java:880)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.mysql.cj.jdbc.result.ResultSetImpl.getLong(ResultSetImpl.java:885)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at edu.knoldus.daoImpl.EmployeeDaoImpl.getEmployee(EmployeeDaoImpl.scala:30)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at edu.knoldus.daoImpl.EmployeeDaoImplTest.$anonfun$new$3(EmployeeDaoImplTest.scala:30)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m- test getEmployeesByDeptId *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  java.sql.SQLException: Operation not allowed after ResultSet closed[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:545)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:513)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:505)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:479)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.mysql.cj.jdbc.result.ResultSetImpl.checkClosed(ResultSetImpl.java:471)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:589)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:920)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at edu.knoldus.daoImpl.EmployeeDaoImpl.getEmployeeList(EmployeeDaoImpl.scala:79)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at edu.knoldus.daoImpl.EmployeeDaoImpl.getEmployeesByDeptId(EmployeeDaoImpl.scala:44)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at edu.knoldus.daoImpl.EmployeeDaoImplTest.$anonfun$new$4(EmployeeDaoImplTest.scala:38)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m- test getEmployeesByProjectId *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  java.lang.NullPointerException:[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:590)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:920)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at edu.knoldus.daoImpl.EmployeeDaoImpl.getEmployeeList(EmployeeDaoImpl.scala:78)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at edu.knoldus.daoImpl.EmployeeDaoImpl.getEmployeesByProjectId(EmployeeDaoImpl.scala:53)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at edu.knoldus.daoImpl.EmployeeDaoImplTest.$anonfun$new$5(EmployeeDaoImplTest.scala:46)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[32m- test removeEmployee()[0m[0m
