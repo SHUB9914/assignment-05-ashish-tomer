@@ -5,3 +5,4 @@ package edu.knoldus.model
   */
 case class Department(id : Long,
                       name : String)
+

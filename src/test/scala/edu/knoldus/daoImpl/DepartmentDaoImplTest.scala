@@ -1,8 +1,7 @@
 package edu.knoldus.daoImpl
 
 import edu.knoldus.model.Department
-import org.scalatest.{BeforeAndAfterAll, BeforeAndAfterEach, FunSuite}
-import edu.knoldus.daoImpl.DepartmentDaoImpl
+import org.scalatest.FunSuite
 /**
   * Created by ashish on 2/1/17.
   */

@@ -13,10 +13,15 @@ class EmployeeDaoImpl extends EmployeeDao{
 
   override def createEmployee(employee: Employee): Boolean = {
 
-    val query : String = s"insert into employee values(${employee.id},'${employee.name}', '${employee.address}', ${employee.phone}, ${employee.deptId}, ${employee.projectId});"
+    val query : String = s"insert into employee values(${employee.id},'${employee.name}', '${employee.address}'," +
+      s"${employee.phone}, ${employee.deptId}, ${employee.projectId});"
 
-    if(MysqlWorker.pushData(query) ==1) true
-    else false
+    if(MysqlWorker.pushData(query) ==1) {
+      true
+    }
+    else {
+      false
+    }
 
   }
 
@@ -56,17 +61,26 @@ class EmployeeDaoImpl extends EmployeeDao{
 
   override def updateEmployee(employee: Employee): Boolean = {
 
-    val query : String = s"update employee set name = '${employee.name}', address = '${employee.address}', phone = ${employee.phone}, dept_id = ${employee.deptId}, project_id = ${employee.projectId} where id = ${employee.id}";
-    if(MysqlWorker.updateData(query) == 1) true
-    else false
+    val query : String = s"update employee set name = '${employee.name}', address = '${employee.address}', " +
+      s"phone = ${employee.phone}, dept_id = ${employee.deptId}, project_id = ${employee.projectId} where id = ${employee.id}";
+    if(MysqlWorker.updateData(query) == 1) {
+      true
+    }
+    else {
+      false
+    }
 
   }
 
   override def removeEmployee(idArg: Long): Boolean = {
 
     val query: String = s"delete from employee where id = $idArg"
-    if(MysqlWorker.deleteData(query) == 1) true
-    else false
+    if(MysqlWorker.deleteData(query) == 1) {
+      true
+    }
+    else {
+      false
+    }
 
   }
 
@@ -82,7 +96,7 @@ class EmployeeDaoImpl extends EmployeeDao{
         employees.getLong("project_id")
       ) :: employeeList)
     } else {
-      return employeeList
+      employeeList
     }
   }
 

@@ -7,7 +7,7 @@ import edu.knoldus.model.Client
   */
 trait ClientDao {
   def getClient(id : Long) : Client
-  def getClientByProjectId(id : Long) : Client
+  def getClientByProjectId(id : Long) : List[Client]
   def removeClient(id : Long) : Boolean
   def updateClient(client : Client) : Boolean
   def createClient(client : Client) : Boolean//Using create instead of insert

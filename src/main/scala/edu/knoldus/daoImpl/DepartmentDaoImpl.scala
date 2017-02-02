@@ -14,8 +14,12 @@ class DepartmentDaoImpl extends DepartmentDao{
   override def createDepartment(department: Department): Boolean = {
     val query : String = s"insert into department values(${department.id},'${department.name}');"
 
-    if(MysqlWorker.pushData(query) ==1) true
-    else false
+    if(MysqlWorker.pushData(query) ==1) {
+      true
+    }
+    else {
+      false
+    }
   }
 
   override def getDepartment(deptId: Long): Department = {
@@ -35,8 +39,12 @@ class DepartmentDaoImpl extends DepartmentDao{
 
     val query : String = s"update department set name = '${department.name}' where id=${department.id};"
 
-    if(MysqlWorker.updateData(query) == 1) true
-    else false
+    if(MysqlWorker.updateData(query) == 1) {
+      true
+    }
+    else {
+      false
+    }
 
   }
 
@@ -44,8 +52,12 @@ class DepartmentDaoImpl extends DepartmentDao{
 
     val query : String = s"delete from department where id = $id"
 
-    if(MysqlWorker.deleteData(query) == 1) true
-    else false
+    if(MysqlWorker.deleteData(query) == 1) {
+      true
+    }
+    else {
+      false
+    }
 
   }
 }

@@ -2,11 +2,12 @@ package edu.knoldus.daoImpl
 
 import edu.knoldus.model.{Client, Department, Project}
 import org.scalatest.{BeforeAndAfterAll, FunSuite}
+import org.apache.logging.log4j.core
 
 /**
   * Created by ashish on 2/1/17.
   */
-class ClientDaoImplTest extends FunSuite with BeforeAndAfterAll{
+class ClientDaoImplTest extends FunSuite with BeforeAndAfterAll {
 
   override def beforeAll(): Unit = {
 
@@ -48,6 +49,13 @@ class ClientDaoImplTest extends FunSuite with BeforeAndAfterAll{
     val client = Client(543903L,1023, "Kolkata Bloomers", "Kolkata")
     val clientDaoImpl = new ClientDaoImpl
     assert(clientDaoImpl.getClient(clientId) == client)
+  }
+
+  test("test getClientByProjectId") {
+    val projectId = 1023
+    val client = Client(543903L,1023, "Kolkata Bloomers", "Kolkata")
+    val clientDaoImpl = new ClientDaoImpl
+    assert(clientDaoImpl.getClientByProjectId(projectId) == List(client))
   }
 
   test("test removeClient() ") {
