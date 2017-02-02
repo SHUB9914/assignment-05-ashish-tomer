@@ -14,6 +14,8 @@ I guess the problem was that scalatest (in terminal) run the test cases in no pa
 ![alt tag](https://raw.githubusercontent.com/ashishknoldus/assignment-05-ashish-tomer/master/scalaStyle.png)
 There was this particular warning. I couldn't resolve it.
 
+<b>Update : The warning has been resolved</b>
+
 ## log4j Logger
 
 I coudn't find a particular documentation on internet and couldn't perform logging.
